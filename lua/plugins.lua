@@ -15,20 +15,28 @@ return require('packer').startup(function()
         end
     }
 
+    use {'preservim/nerdtree'}
+
+    use {'tpope/vim-surround'}
+
+    use {'easymotion/vim-easymotion'}
+
+    use {'junegunn/fzf'}
+
+    use {'voldikss/vim-floaterm'}
+
     use {
-        'preservim/nerdtree',
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/plenary.nvim'}}
     }
 
     use {
-        'tpope/vim-surround'
-    }
-
-    use {
-        'easymotion/vim-easymotion'
-    }
-
-    use {
-        'junegunn/fzf'
+        'nvim-treesitter/nvim-treesitter',
+        config = function()
+            require('nvim-treesitter').setup {
+                do = 'TSUpdate'
+            }
+        end
     }
 
 end)
