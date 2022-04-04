@@ -4,3 +4,4 @@ package.path = home_dir .. "/.config/nvim/lua/?.lua;" .. package.path
 require('plugins')
 require('settings')
 require('mappings')
+require('lsp-config')
