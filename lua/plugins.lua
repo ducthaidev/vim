@@ -19,4 +19,16 @@ return require('packer').startup(function()
         'preservim/nerdtree',
     }
 
+    use {
+        'tpope/vim-surround'
+    }
+
+    use {
+        'easymotion/vim-easymotion'
+    }
+
+    use {
+        'junegunn/fzf'
+    }
+
 end)

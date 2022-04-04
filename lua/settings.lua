@@ -13,5 +13,4 @@ set.softtabstop = 2
 set.expandtab = true
 
 vim.api.nvim_command([[
-    autocmd VimEnter * NERDTree
 ]])
