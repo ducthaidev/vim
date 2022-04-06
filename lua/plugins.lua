@@ -22,7 +22,7 @@ return require("packer").startup(
           'voldikss/vim-floaterm',
           {
               'nvim-telescope/telescope.nvim',
-              requires = {{'nvim-lua/plenary.nvim'}}
+              requires = {{'nvim-lua/plenary.nvim'}},
           },
           {
               'nvim-treesitter/nvim-treesitter',
