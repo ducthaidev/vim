@@ -40,7 +40,7 @@ utils.map('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>', ns_opts)
 -- insert mode --
 -----------------
 
--- jk to 
+-- jk to ESC
 utils.map('i', 'jk', '<Esc>', ns_opts)
 
 -----------------

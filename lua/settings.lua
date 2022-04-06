@@ -2,7 +2,7 @@
 -- global config --
 -------------------
 
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
 
 local set = vim.opt
 set.number = true
