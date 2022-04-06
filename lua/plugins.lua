@@ -5,15 +5,6 @@ return require("packer").startup(
         -- better escape
         use {
             'max397574/better-escape.nvim',
-            config = function()
-                require("better_escape").setup {
-                    mapping = {'jk', 'jj'},
-                    -- default: timeout = vim.o.timeoutlen,
-                    timeout = 1,
-                    clear_empty_lines = false,
-                    keys = "<Esc>"
-                }
-            end
         }
         -- nerdtree
         use 'preservim/nerdtree'
