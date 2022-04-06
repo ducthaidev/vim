@@ -11,14 +11,15 @@
 # install python3
 #sudo pacman -S python3
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 # if nvim directory existing
 if [ -d /home/$USER/.config/nvim ]
 then
     rm -rf /home/$USER/.config/nvim
 fi
 
-mkdir -p /home/$USER/.config/nvim/
-mkdir -p /home/$USER/.config/nvim/lua
+mkdir -p /home/$USER/.config/nvim
 
-cp ./init.lua /home/$USER/.config/nvim/
-cp -r ./lua/* /home/$USER/.config/nvim/lua
+
+cp -r $SCRIPT_DIR/* /home/$USER/.config/nvim/

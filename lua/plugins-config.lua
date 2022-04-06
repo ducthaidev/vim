@@ -13,3 +13,26 @@ require("better_escape").setup {
     --   return vim.api.nvim_win_get_cursor(0)[2] > 1 and '<esc>l' or '<esc>'
     -- end,
 }
+
+local null_ls = require("null-ls")
+
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+local completion = null_ls.builtins.completion
+
+null_ls.setup({
+    sources = {
+        formatting.stylua,
+        formatting.autopep8,
+        formatting.clang_format.with({
+          extra_args = {
+            "--style=Google",
+          }
+        }),
+        diagnostics.eslint,
+        diagnostics.flake8,
+        diagnostics.cppcheck,
+        completion.spell,
+    },
+    debug = true,
+})

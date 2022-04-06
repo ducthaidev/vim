@@ -41,5 +41,13 @@ return require("packer").startup(
           'nvim-lualine/lualine.nvim',
           requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         }
+        -- null-ls
+        use({
+            "jose-elias-alvarez/null-ls.nvim",
+            config = function()
+                require("null-ls").setup()
+            end,
+            requires = { "nvim-lua/plenary.nvim" },
+        })
     end
 )
