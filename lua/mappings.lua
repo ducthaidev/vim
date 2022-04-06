@@ -11,6 +11,8 @@ local ns_opts = { noremap=true, silent=true }
 -- normal mode --
 -----------------
 
+utils.map('n', '<Esc>', ':noh<CR><Esc>', ns_opts)
+
 -- NERDTree toggle
 utils.map('n', '<C-t>', ':NERDTreeToggle<CR>', ns_opts)
 
