@@ -28,7 +28,8 @@ utils.map('n', 'f', '<leader><leader>f', {})
 
 -- open terminal
 utils.map('n', '<Leader>t', ':FloatermToggle --height=0.6 --width=0.4<CR>', ns_opts)
-utils.map('t', '<Esc>', '<C-\\><C-n>', ns_opts)
+utils.map('t', '<Esc>', '<C-\\><C-n>:FloatermToggle<CR>', ns_opts)
+
 -- telescope
 utils.map('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', ns_opts)
 utils.map('n', '<Leader>fg', '<cmd>Telescope live_grep<cr>', ns_opts)

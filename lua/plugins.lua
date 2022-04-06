@@ -1,9 +1,9 @@
 return require("packer").startup(
-    function()
+    function(use)
         -- Packer can manage itself
+        use 'wbthomason/packer.nvim'
+        -- better escape
         use {
-          'wbthomason/packer.nvim',
-          {
             'max397574/better-escape.nvim',
             config = function()
                 require("better_escape").setup {
@@ -14,28 +14,41 @@ return require("packer").startup(
                     keys = "<Esc>"
                 }
             end
-          },
-          'preservim/nerdtree',
-          'tpope/vim-surround',
-          'easymotion/vim-easymotion',
-          'junegunn/fzf',
-          'voldikss/vim-floaterm',
-          {
+        }
+        -- nerdtree
+        use 'preservim/nerdtree'
+        -- vim surround
+        use 'tpope/vim-surround'
+        -- easymotion
+        use 'easymotion/vim-easymotion'
+        -- fzf
+        use 'junegunn/fzf'
+        -- vim floaterm
+        use 'voldikss/vim-floaterm'
+        -- telescope
+        use {
               'nvim-telescope/telescope.nvim',
               requires = {{'nvim-lua/plenary.nvim'}},
-          },
-          {
+        }
+        -- treesitter
+        use {
               'nvim-treesitter/nvim-treesitter',
               run = ":TSUpdate"
-          },
-          'hrsh7th/cmp-buffer',
-          'hrsh7th/cmp-path',
-          'hrsh7th/cmp-cmdline',
-          'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
-          'hrsh7th/nvim-cmp', -- Autocompletion plugin
-          'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
-          'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-          'L3MON4D3/LuaSnip',
+        }
+        -- cmp
+        use 'hrsh7th/cmp-buffer'
+        use 'hrsh7th/cmp-path'
+        use 'hrsh7th/cmp-cmdline'
+        use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+        use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+        use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+        use 'L3MON4D3/LuaSnip'
+        -- neovim lsp
+        use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+        -- lualine
+        use {
+          'nvim-lualine/lualine.nvim',
+          requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         }
     end
 )
