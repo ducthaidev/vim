@@ -11,7 +11,11 @@ local ns_opts = { noremap=true, silent=true }
 -- normal mode --
 -----------------
 
+-- turn off highlight
 utils.map('n', '<Esc>', ':noh<CR><Esc>', ns_opts)
+
+-- show and select buffer
+utils.map('n', '<Leader>l', ':ls<CR>:b ', ns_opts)
 
 -- NERDTree toggle
 utils.map('n', '<C-t>', ':NERDTreeToggle<CR>', ns_opts)
