@@ -24,10 +24,10 @@ utils.map("n", "<Leader>l", ":ls<CR>:b ", ns_opts)
 utils.map("n", "<C-t>", ":NERDTreeToggle<CR>", ns_opts)
 
 -- move between window
-utils.map("n", "<left>", ":wincmd h<CR>", ns_opts)
-utils.map("n", "<down>", ":wincmd j<CR>", ns_opts)
-utils.map("n", "<up>", ":wincmd k<CR>", ns_opts)
-utils.map("n", "<right>", ":wincmd l<CR>", ns_opts)
+utils.map("n", "<C-h>", ":wincmd h<CR>", ns_opts)
+utils.map("n", "<C-j>", ":wincmd j<CR>", ns_opts)
+utils.map("n", "<C-k>", ":wincmd k<CR>", ns_opts)
+utils.map("n", "<C-l>", ":wincmd l<CR>", ns_opts)
 
 -- easymotion
 utils.map("n", "F", "<leader><leader>F", {})
